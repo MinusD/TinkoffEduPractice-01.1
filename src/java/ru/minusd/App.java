@@ -1,10 +1,10 @@
 package src.java.ru.minusd;
 
 /**
- * Используем volatile и synchronized, что бы потоки не конфликтовали
+ * Перенёс а MR (PR)
  */
 public class App {
-    private static volatile int counter = 1;
+    private static int counter = 1;
 
     private static synchronized void incrementCounter() {
         counter++;
@@ -38,7 +38,6 @@ public class App {
         } catch (Exception e) {
             System.out.println("Threads Error :(");
         }
-
 
         System.out.println("Counter value: " + counter);
     }
